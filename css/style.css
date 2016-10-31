@@ -30,9 +30,14 @@ div{
 }
 
 /*Standard Buttons*/
+
+.container{
+	width: 100%;
+	text-align: center;
+}
 .standard-buttons-container{
 	color: #ffffff;
-	width: 25%;
+	width: 20%;
 	display: inline-block;
 	font-size: 10px;
 	text-align: center;
@@ -91,7 +96,7 @@ ul.standard-buttons-1 > li:last-child{
 	border: 1px solid #45ac9d;
 	color: #45ac9d;
 	-webkit-border-radius: 2px 2px 0 0;
-	        border-radius: 2px 2px 0 0;
+	border-radius: 2px 2px 0 0;
 	
 }
 
@@ -135,7 +140,7 @@ ul.standard-buttons-2 > li:last-child{
 	border: 1px solid #45ac9d;
 	color: #45ac9d;
 	-webkit-border-radius: 2px 2px 0 0;
-	        border-radius: 2px 2px 0 0;
+	border-radius: 2px 2px 0 0;
 	
 }
 
@@ -179,7 +184,7 @@ ul.standard-buttons-3 > li:last-child{
 	border: 1px solid #e75735;
 	color: #e75735;
 	-webkit-border-radius: 2px 2px 0 0;
-	        border-radius: 2px 2px 0 0;
+	border-radius: 2px 2px 0 0;
 	
 }
 
@@ -222,7 +227,7 @@ ul.standard-buttons-4 > li:last-child{
 	border: 1px solid #e75735;
 	color: #bf3e1f;
 	-webkit-border-radius: 2px 2px 0 0;
-	        border-radius: 2px 2px 0 0;
+	border-radius: 2px 2px 0 0;
 	
 }
 
@@ -236,4 +241,69 @@ ul.standard-buttons-4 > li:last-child:after{
 	background: #bf3e1f;
 	-webkit-border-radius: 0 0 2px 2px;
 	border-radius: 0 0 2px 2px;
+}
+
+/*Arrow Battons*/
+
+.arrow-buttons-container{
+	margin-top: 39px;
+	width: 100%;
+	text-align: center;
+}
+
+.arrow-buttons-container ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+	display: block;
+	font-size: 0; /* добавляем блочность, если необходимо */
+}
+
+ul.arrow-buttons li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	font-size: 20px;
+	margin: 0 2%;
+	vertical-align: middle;
+}
+
+ul.arrow-buttons > li:first-child, 
+ul.arrow-buttons > li:nth-child(2){
+	border: 3px solid #4eb7a8;
+	width: 45px;
+	height: 45px;
+}
+
+ul.arrow-buttons > li:nth-child(3),
+ul.arrow-buttons > li:nth-child(4){
+	background: #e5e5e5;
+}
+
+ul.arrow-buttons > li:nth-child(5),
+ul.arrow-buttons > li:nth-child(6){
+	background: #4eb7a8;
+}
+
+li > i.arrow{
+	padding: 1px 6px 2px 1px;
+	color: #4eb7a8;
+}
+
+li > i.arrow2{
+	padding: 1px 1px 2px 6px;
+	color: #4eb7a8; 
+}
+
+li > i.arrow3{
+	padding: 3px 6px 3px 1px;
+	color: #fff;
+}
+
+li > i.arrow4{
+	padding: 3px 1px 3px 6px;
+	color: #fff; 
 }
