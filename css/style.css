@@ -1,0 +1,239 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family:"Lato Black";
+}
+
+div{
+	font-size: 0;
+}
+
+.wrapper{
+	margin: 0 auto;
+	display: flex;
+	width: 650px;
+	height: 100px;
+	background: #ffffff;
+}
+.content{
+	display: block;
+	width: 100%;
+	height: 600px;
+}
+
+.headers-text{
+	display: block;
+	font-size: 18px;
+	text-align: center;
+}
+
+/*Standard Buttons*/
+.standard-buttons-container{
+	color: #ffffff;
+	width: 25%;
+	display: inline-block;
+	font-size: 10px;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+ul.standard-buttons-1,
+ul.standard-buttons-2,
+ul.standard-buttons-3,
+ul.standard-buttons-4{
+	display: inline-block;
+	padding: 0;
+	position: relative;
+	list-style-type: none;
+}
+
+ul.standard-buttons-1 > li:first-child,
+ul.standard-buttons-2 > li:first-child,
+ul.standard-buttons-3 > li:first-child,
+ul.standard-buttons-4 > li:first-child{
+	-webkit-border-radius:2px;
+	border-radius:2px;
+}
+
+ul.standard-buttons-1 > li:not(:first-child),
+ul.standard-buttons-2 > li:not(:first-child),
+ul.standard-buttons-3 > li:not(:first-child),
+ul.standard-buttons-4 > li:not(:first-child){
+	-webkit-border-radius:2px 2px 0 0;
+	border-radius:2px 2px 0 0;
+}
+
+/*standard-buttons column 1*/
+ul.standard-buttons-1 > li{
+	margin: 30px 0 20px;
+	padding: 0;
+	background-color: #4eb7a8;
+	width: 78px;
+	height: 22px;
+	line-height: 22px;
+}
+
+ul.standard-buttons-1 > li:nth-child(2):after{
+	content: "";
+	display: block;
+	width: 78px;
+	height: 2px;
+	background: #28a290;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+}
+
+ul.standard-buttons-1 > li:last-child{
+	width: 77px;
+	background: #ffffff;
+	border: 1px solid #45ac9d;
+	color: #45ac9d;
+	-webkit-border-radius: 2px 2px 0 0;
+	        border-radius: 2px 2px 0 0;
+	
+}
+
+ul.standard-buttons-1 > li:last-child:after{
+	content: "";
+	display: block;
+	position: relative;
+	left: -1px;
+	width: 79px;
+	height: 2px;
+	background: #28a290;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+
+}
+
+/*standard-buttons column 2*/
+ul.standard-buttons-2 > li{
+	margin: 10px 0 20px 0;
+	padding: 0;
+	text-align: center;
+	background-color: #4eb7a8;
+	width: 118px;
+	height: 32px;
+	line-height: 32px;
+}
+
+ul.standard-buttons-2 > li:nth-child(2):after{
+	content: "";
+	display: block;
+	width: 118px;
+	height: 2px;
+	background: #28a290;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+}
+
+ul.standard-buttons-2 > li:last-child{
+	width: 117px;
+	background: #ffffff;
+	border: 1px solid #45ac9d;
+	color: #45ac9d;
+	-webkit-border-radius: 2px 2px 0 0;
+	        border-radius: 2px 2px 0 0;
+	
+}
+
+ul.standard-buttons-2 > li:last-child:after{
+	content: "";
+	display: block;
+	position: relative;
+	left: -1px;
+	width: 119px;
+	height: 2px;
+	background: #28a290;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+
+}
+
+/*standard-buttons column 3*/
+ul.standard-buttons-3 > li{
+	margin: 10px 0 20px;
+	padding: 0;
+	text-align: center;
+	background-color: #e75735;
+	width: 118px;
+	height: 32px;
+	line-height: 32px;
+}
+
+ul.standard-buttons-3 > li:nth-child(2):after{
+	content: "";
+	display: block;
+	width: 118px;
+	height: 2px;
+	background: #bf3e1f;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+}
+
+ul.standard-buttons-3 > li:last-child{
+	width: 117px;
+	background: #ffffff;
+	border: 1px solid #e75735;
+	color: #e75735;
+	-webkit-border-radius: 2px 2px 0 0;
+	        border-radius: 2px 2px 0 0;
+	
+}
+
+ul.standard-buttons-3 > li:last-child:after{
+	content: "";
+	display: block;
+	position: relative;
+	left: -1px;
+	width: 119px;
+	height: 2px;
+	background: #bf3e1f;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+
+}
+
+/*standard-buttons column 4*/
+ul.standard-buttons-4 > li{
+	margin: 30px 0 20px;
+	padding: 0;
+	background-color: #e75735;
+	width: 78px;
+	height: 22px;
+	line-height: 22px;
+}
+
+ul.standard-buttons-4 > li:nth-child(2):after{
+	content: "";
+	display: block;
+	width: 78px;
+	height: 2px;
+	background: #bf3e1f;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+}
+
+ul.standard-buttons-4 > li:last-child{
+	width: 77px;
+	background: #ffffff;
+	border: 1px solid #e75735;
+	color: #bf3e1f;
+	-webkit-border-radius: 2px 2px 0 0;
+	        border-radius: 2px 2px 0 0;
+	
+}
+
+ul.standard-buttons-4 > li:last-child:after{
+	content: "";
+	display: block;
+	position: relative;
+	left: -1px;
+	width: 79px;
+	height: 2px;
+	background: #bf3e1f;
+	-webkit-border-radius: 0 0 2px 2px;
+	border-radius: 0 0 2px 2px;
+}
