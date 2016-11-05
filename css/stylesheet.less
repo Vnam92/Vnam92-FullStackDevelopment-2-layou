@@ -1,0 +1,159 @@
+.size(@w, @h) {
+  height: @h;
+  width: @w;
+}
+
+.percentages-container *,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+.charts-container:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@bg: #34495e;
+@size: 95px;
+
+.pie-wrapper {
+  .size(@size, @size);
+  float: left;
+  margin: 11px;
+  position: relative;
+
+  .pie {
+    .size(100%, 100%);
+    clip: rect(0, @size, @size, @size / 2);
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .half-circle {
+      .size(100%, 100%);
+      border: 5px solid #3498db;
+      border-radius: 50%;
+      clip: rect(0, @size / 2, @size, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .label {
+    @font-size: 40px;
+    @font-size-redo: @size * 4;
+    @font-family-label: "Lato Light";
+
+    
+    background: @bg;
+    border-radius: 50%;
+    position: absolute;
+    color: #ecf0f1;
+    display: block;
+    font-size: @font-size;
+    font-family:@font-family-label;
+    text-align: center;
+    line-height: @font-size - 10px;
+    left: @font-size-redo / 16;
+    top: @font-size-redo / 12.5;
+  }
+
+  &.style-2 {
+    .label {
+      background: none;
+      color: #9d9d9d;
+    }
+  }
+
+  &.progress-38 {
+    .draw-progress(38, #e75735);
+  }
+  &.progress-62 {
+    .draw-progress(62, #e75735);
+  }
+  &.progress-89 {
+    .draw-progress(89, #e75735);
+  }
+
+  &.progress-10 {
+    .draw-progress(10, #e75735);
+    
+  }
+
+}
+
+.progress-10 {
+  .size(@size, @size);
+  float: left;
+  margin: 11px;
+  position: relative;
+
+  .inner {
+    .size(100%, 100%);
+    clip: rect(0, @size, @size, @size / 2);
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .half-circle1 {
+      .size(100%, 100%);
+      border: 17px solid #747474;
+      border-color: #747474;
+      border-radius: 50%;
+      clip: rect(0, @size / 2, @size, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &.style-3 {
+    .label {
+      background: none;
+      color: #9d9d9d;
+    }
+  }
+  .shadow {
+    .size(100%, 100%);
+    border: 17px solid #e5e5e5;
+    border-radius: 50%;
+  }
+  .draw-progress(10, #e75735);    
+}
+
+
+
+.draw-progress(@progress, @color) when (@progress <= 50) {
+  .pie {
+    .right-side {
+      display: none;
+    }
+  }
+}
+
+.draw-progress(@progress, @color) when (@progress > 50) {
+  .pie {
+    clip: rect(auto, auto, auto, auto);
+
+    .right-side {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.draw-progress(@progress, @color) {
+  .pie {
+    .half-circle {
+      border-color: @color;
+    }
+
+    .left-side {
+      @rotate: @progress * 3.6;
+      transform: rotate(~'@{rotate}deg');
+    }
+  }
+}
+

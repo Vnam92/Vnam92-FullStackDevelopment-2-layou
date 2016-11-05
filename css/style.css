@@ -315,27 +315,32 @@ li > i.arrow4{
 .percentages-container{
 	width: 100%;
 	text-align: center;
+	height: auto;
 }
 
-.percentages-container > ul{
-	list-style: none;
-	text-align: center;
-	display: block;
-	font-size: 0; 
-
-}
-
-.percentages-container > ul > li{
-	margin: 5%;
-	width: 90px;
-	height: 90px;
-	border: 6px solid black;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
-	border-color: black;
-	color: #9d9d9d;
-	font-size: 40px; 
-	font-family:"Lato Light";
+.colorWheel {
 	display: inline-block;
+	position: relative;
+	margin: 1em auto;
+	width: 95px; height: 95px;
+	border-radius: 50%;
+	background: 
+	linear-gradient(72deg, #e5e5e5 75.48%, transparent 75.48%) 0% 0%,
+	linear-gradient(-72deg, #e75735 75.48%, transparent 75.48%) 105% 5%, 
+	linear-gradient(-56deg, transparent  24.52%, #e5e5e5 24.52%) 0% 90%, 
+	#4eb7a8 linear-gradient(#747474, #747474) 50% 0%;
+	background-repeat: no-repeat;
+	background-size: 50% 50%;
+	transform: rotate(16deg)
+}
+.colorWheel:after {
+	display: inline-block;
+	position: relative;
+	top: 19%; left: 1%;
+	margin: -1.82em;
+	width: 60px; height: 60px;
+	border-radius: 50%;
+	background: white;
+	content: '';
 }
 
