@@ -1,3 +1,5 @@
+
+/*Percentage / Pie chart*/
 .size(@w, @h) {
   height: @h;
   width: @w;
@@ -79,53 +81,16 @@
   }
 
   &.progress-10 {
-    .draw-progress(10, #e75735);
-    
+    .draw-progress(10, #e75735);  
   }
-
 }
 
 .progress-10 {
   .size(@size, @size);
   float: left;
   margin: 11px;
-  position: relative;
-
-  .inner {
-    .size(100%, 100%);
-    clip: rect(0, @size, @size, @size / 2);
-    left: 0;
-    position: absolute;
-    top: 0;
-
-    .half-circle1 {
-      .size(100%, 100%);
-      border: 17px solid #747474;
-      border-color: #747474;
-      border-radius: 50%;
-      clip: rect(0, @size / 2, @size, 0);
-      left: 0;
-      position: absolute;
-      top: 0;
-    }
-  }
-
-  &.style-3 {
-    .label {
-      background: none;
-      color: #9d9d9d;
-    }
-  }
-  .shadow {
-    .size(100%, 100%);
-    border: 17px solid #e5e5e5;
-    border-radius: 50%;
-  }
-  .draw-progress(10, #e75735);    
+  position: relative; 
 }
-
-
-
 .draw-progress(@progress, @color) when (@progress <= 50) {
   .pie {
     .right-side {
@@ -157,3 +122,114 @@
   }
 }
 
+/*Sliders*/
+
+@width: 100%;
+@max-w: 50%;
+
+.sliders-container{
+  display: inline-block;
+  width: @width;
+  padding: 0;
+  position: relative;
+  
+  .left-slider{
+    float:left;
+    max-width:@max-w;
+  }
+  .right-slider{  
+    float:right;
+    max-width:@max-w;
+    
+  }
+}
+
+/*Stages*/
+
+@fill: #888888;
+
+.stages-container{
+  display: inline-block;
+  width: @width;
+  padding: 0;
+  position: relative;
+  svg{
+    width: @width;
+  }
+}
+
+/*Form elements*/
+.forms-container{
+  width: @width;
+  display: block;
+  padding: 0;
+  position: relative;
+  
+  &.clear:after {
+    content: "&nbsp;";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+  }
+
+  .left-form{
+    display: inline-block;
+    margin-top: 10px ;
+    max-width: @max-w;
+    height: 100%;
+
+    .inner-rect{
+      width: 208px;
+      height: 28px;
+      fill: #e5e5e5;
+    }
+    .inner-rect-large{
+      width: 288px;
+      height: 88px;
+      fill: #e5e5e5;
+    }
+    .error{
+      width: 72px;
+      height: 28px;
+      fill: #e75735;
+    }
+    .error-text, .thanks-text{
+      fill: #ffffff;
+      font-size: 10px; 
+    }
+    .thanks{
+      width: 72px;
+      height: 28px;
+      fill: #4eb7a8;
+    }
+    .inner-data{
+      font-size: 14px; 
+      font-weight: bold;
+      font-family: "SourceSansProRegular";
+      fill: @fill;
+    }
+    .submit{
+      display: block;
+      width: 118px;
+      height: 32px;
+      fill: #4eb7a8;
+    }
+    .submit-after{
+      display: block;
+      position: relative;
+      width: 118px;
+      height: 3px;
+      fill: #28a290;
+    }
+    .submit-text{
+      fill: #ffffff;
+      font-size: 12px; 
+    }
+  }
+  .right-form{
+    display: inline-block;
+    max-width: @max-w;
+  }
+}
