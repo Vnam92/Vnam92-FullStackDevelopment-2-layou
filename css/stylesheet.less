@@ -161,7 +161,7 @@
 /*Form elements*/
 .forms-container{
   width: @width;
-  display: block;
+  display: inline-block;
   padding: 0;
   position: relative;
   
@@ -176,9 +176,9 @@
 
   .left-form{
     display: inline-block;
-    margin-top: 10px ;
-    max-width: @max-w;
+    width: @max-w;
     height: 100%;
+    float: left;
 
     .inner-rect{
       width: 208px;
@@ -229,7 +229,131 @@
     }
   }
   .right-form{
-    display: inline-block;
-    max-width: @max-w;
+   display: inline-block;
+   width: @max-w;
+   height: 100%;
+   float: left;
+   text-align: center;
+
+   .toggles-containter{
+    width: inherit;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
   }
+
+  .on, .off{
+    color: white;
+    float: right;
+    display: inline-block;
+    text-align: center;
+    margin-top: 3px;
+    margin-right: 6px;
+    font-size: 14px;
+  }
+  
+  .off-out-1{
+    display: block;
+    background: #4eb7a8;
+    width: 59px;
+    height: 24px;
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+  }
+  
+  & .indent{
+    margin-right: 10px;
+    margin-left:15px;
+    background: #e5e5e5;
+    
+  }
+  .off-circle{
+    display: block;
+    background: #ffffff;
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    margin: 3px 0 0 3px;
+  }
+  
+  & .tick{
+    margin: 0 auto;
+    width: 28px;
+    height: 28px;
+    background: #4eb7a8;
+    
+    i.check{
+      color: #ffffff;
+      position: relative;
+      margin: 5px 0;
+      text-align: center;
+      font-size: 18px;
+    }
+
+  }
+
+  & .tick2{
+    background: #e5e5e5;
+    color: #c0c0c0;
+  }
+
+  .tick-boxes-container{
+    width: 90px;
+  }  
+
+}
+}
+
+@font-size-search: 14px;
+
+.search-drop-container{
+
+  color: black;
+  width: 100%;
+  height: auto;
+  
+  
+  .search{
+    width: 273px;
+    height: 18px;
+    background: #e5e5e5;
+    color: #888888;
+    font-family: "SourceSansProRegular";
+    font-size: @font-size-search;
+    padding: 5px 0 5px 15px;
+    margin-bottom:18px;
+
+    .right-side-drop{
+      float: right;
+      display: block;
+      position: relative;
+      width: 33px;
+      height: 28px;
+      margin: -5px 0 0 0;
+
+      background: #4eb7a8;
+      i{
+        color: white;
+        font-size: @font-size-search *1.7;
+        float: right;
+        margin: 2px 8px 0 0;
+      } 
+      .search-icon{
+       font-size: @font-size-search * 1.1;
+       margin: 6px 8px 0 0;
+     }
+     &.red{
+      background: #e75735;
+    }
+  }
+
+
+}
+.not-found{
+  background: #e75735;
+  color: #ffffff;
+}
+
 }
