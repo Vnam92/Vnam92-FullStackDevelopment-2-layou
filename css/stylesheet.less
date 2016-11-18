@@ -302,7 +302,7 @@
   .tick-boxes-container{
     width: 90px;
   }  
-  }
+}
 }
 
 @font-size-search: 14px;
@@ -352,7 +352,7 @@
 .not-found{
   background: #e75735;
   color: #ffffff;
-  }
+}
 }
 
 .user-profile-container{
@@ -463,7 +463,7 @@
       }
     }
   }
-  }
+}
 }
 
 @font-size-news: 28px;
@@ -831,12 +831,14 @@
         width: 84%;
         height: 313px;
         display: block;
-        background: yellow;
+        background: #f2f2f2;
         margin: 35px auto 0;
 
         .message-user-icons{
           width: 100%;
           height: 64px;
+          display: block;
+          position: relative;
           i{
             font-size: 25px;
             color: #8e8d8d;
@@ -849,12 +851,13 @@
             } 
           }
           .message-user-avatar{
-            text-align: center;
+            margin: auto;
+            position: absolute;
             width: 84px;
             height: 84px;
-            bottom: 50px;
-            display: block;
-            -webkit-border-radius: 50%;
+            bottom: 20px;
+            left: 70px;
+            display: -webkit-inline-box;
             border-radius: 50%;
             border: 4px solid #e5e5e5;
             img.message-profile-img{
@@ -872,7 +875,7 @@
           -webkit-border-radius: 5px;
           border-radius: 5px;
           span{
-            padding-left:13px ;
+            padding-left:5px ;
             text-align: left;
             display:table-cell;
             vertical-align: middle;
@@ -880,6 +883,16 @@
             font-family:"Lato Black";
             color: #868686;
           }
+        }
+        .msg-question:before{
+          content: "";
+          display: block;
+          position: relative;
+          left: 110px;
+          bottom: 6px;
+          border-style: solid;
+          border-width: 0 6.5px 6px 6.5px;
+          border-color: transparent transparent #ffffff transparent;
         }
         .msg-answer{
           margin: 17px auto;
@@ -947,7 +960,7 @@
     display: block;
     position: relative;
     -webkit-border-radius: 3px;
-            border-radius: 3px;
+    border-radius: 3px;
     .video-handler-panel{
       width: 100%;
       height: 48px;
@@ -991,7 +1004,7 @@
         bottom: 48px;
         float: right;
         -webkit-border-radius: 0 0 3px;
-                border-radius: 0 0 3px;
+        border-radius: 0 0 3px;
         i{
           color: #fff;
           font-size: 20px;
