@@ -302,8 +302,7 @@
   .tick-boxes-container{
     width: 90px;
   }  
-
-}
+  }
 }
 
 @font-size-search: 14px;
@@ -353,7 +352,7 @@
 .not-found{
   background: #e75735;
   color: #ffffff;
-}
+  }
 }
 
 .user-profile-container{
@@ -464,8 +463,7 @@
       }
     }
   }
-}
-
+  }
 }
 
 @font-size-news: 28px;
@@ -665,7 +663,6 @@
       }
     }
   }
-
 }
 
 
@@ -675,7 +672,7 @@
 @font-month: 24px;
 .calendar-msg-container{
   width: 100%;
-  height: auto;
+  height: 15%;
   margin-bottom: 50px;
   padding: 0;
 
@@ -683,6 +680,7 @@
     max-width: @max-w;
     display: inline-block;
     float: left;
+    height: 100%;
     
     .calendar-wrapper{
       width: 279px;
@@ -733,8 +731,6 @@
       color: #fff;
       margin: 11px 10px 9px 11px;
     }
-
-
   }
   .numbers-container{
     padding: 0;
@@ -781,40 +777,229 @@
       }
     }
   }
-  
+
   .today{
     width: 100%;
     height: 49px;
     background: #e5e5e5;
-    -webkit-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px;
+    -webkit-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
     color:#a9a9a9;
     font-size: 13px;
     font-family:"Lato Black";
     line-height: 49px;
-      span{
-        margin-left: 20px;
-      }  
+    span{
+      margin-left: 20px;
+    }  
+  }
+
+  }}
+
+
+  .message{
+    max-width: @max-w;
+    display: inline-block;
+    float: right;
+
+    .message-wrapper{
+      width: 288px;
+      height: 429px;
+      background: #f2f2f2;
+
+      .massage-username{
+        width: 100%;
+        height: 82px;
+        line-height: 82px;
+        background: @color-message;
+        text-align: center;
+        color: #ffffff;
+        font-size: 34px;
+        font-family: "SourceSansProLight";
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0 ;
+      }
+      .massage-username:after{
+        content: "";
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 35px;
+        background: #46ab9d;
+      }
+
+      .message-user-info-wrapper{
+        width: 84%;
+        height: 313px;
+        display: block;
+        background: yellow;
+        margin: 35px auto 0;
+
+        .message-user-icons{
+          width: 100%;
+          height: 64px;
+          i{
+            font-size: 25px;
+            color: #8e8d8d;
+            margin: 24px 0;  
+            &.msg-comment{
+              float: left;
+            } 
+            &.msg-camera{
+              float: right;
+            } 
+          }
+          .message-user-avatar{
+            text-align: center;
+            width: 84px;
+            height: 84px;
+            bottom: 50px;
+            display: block;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            border: 4px solid #e5e5e5;
+            img.message-profile-img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .msg-question{
+          width: 100%;
+          height: 72px;
+          background: #FFF;
+          display: table;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          span{
+            padding-left:13px ;
+            text-align: left;
+            display:table-cell;
+            vertical-align: middle;
+            font-size: 12.5px;
+            font-family:"Lato Black";
+            color: #868686;
+          }
+        }
+        .msg-answer{
+          margin: 17px auto;
+          width: 238px;
+          height: 82px;
+          display: table;
+          background: #e5e5e5;
+          border: 3px solid #ffffff;
+          -webkit-border-radius: 5px;
+          border-radius: 5px;
+          span{
+            padding-left:13px ;
+            text-align: left;
+            display:table-cell;
+            vertical-align: middle;
+            font-size: 12.5px;
+            font-family:"Lato Black";
+            color: #868686;
+          }
+        }
+        .reply-button{
+          width: 100%;
+          height: 32px;
+          display: block;
+          background: #4eb7a8;
+          color: #ffffff;
+          text-align: center;
+          line-height: 32px;
+          font-size: 12px;
+          font-family:"Lato Black";
+          -webkit-border-radius:5px 5px 0 0 ;
+          border-radius:5px 5px 0 0 ;
+        }
+        .reply-button:after{
+          content: "";
+          display: block;
+          position: relative;
+          background: #28a290;
+          width: 100%;
+          height: 3px;
+          -webkit-border-radius: 0 0 5px 5px;
+          border-radius: 0 0 5px 5px;
+        }
+      }
     }
-
-}
-}
-
-
-
-.message{
-  max-width: @max-w;
-  display: inline-block;
-  float: right;
-
-  .message-wrapper{
-    width: 279px;
-    height: 429px;
-    background: @color-message;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
   }
 }
 
-}
 
+.video-container{
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  padding: 0;
+  margin-bottom: 60px;
+  
+  .video{
+    width: 100%;
+    height: 336px;
+    background: url(https://i1.ytimg.com/vi/rPmGtZAUxNs/maxresdefault.jpg);
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 48px;
+    display: block;
+    position: relative;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    .video-handler-panel{
+      width: 100%;
+      height: 48px;
+      display: block;
+      position: absolute;
+      background: transparent;
+      bottom:0;
+      .play-button{
+        margin: 18px 25px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 9px;
+        border-color: transparent transparent transparent #ffffff;
+      }
+      .video-scorebar{
+        width: 500px;
+        height: 5px;
+        background-color: #ffffff;
+        display: block;
+        position: absolute;
+        bottom: 21px;
+        left: 60px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        .video-scorebar-inner{
+          width: 190px;
+          height: 5px;
+          background-color: #e75735;
+          position: relative;
+          -webkit-border-radius: 2px;
+          border-radius: 2px;
+        }
+      }
+      .resize-button{
+        width: 48px;
+        height: 100%;
+        background: #e75735;
+        display: table;
+        position: relative;
+        bottom: 48px;
+        float: right;
+        -webkit-border-radius: 0 0 3px;
+                border-radius: 0 0 3px;
+        i{
+          color: #fff;
+          font-size: 20px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
